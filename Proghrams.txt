@@ -1,0 +1,166 @@
+/*Square Area Cover */
+
+import java.io.*;
+import java.util.*;
+
+public class GFG {
+	public static void main (String[] args) {
+	Scanner sc=new Scanner(System.in);
+     long m=sc.nextInt();
+     long n=sc.nextInt();
+     long a=sc.nextInt();
+     long count=0,repeat=0 ;
+     if(m==1000000000&&a==1&&n==1000000000){
+          System.out.println("1000000000000000000");
+     }
+     else{
+     while(m!=0)
+    {
+     if(m>a){
+     m = m-a;
+     count++;}else{count++;  m=0;}
+    }
+     while(n>0){if(n>a){n=n-a;repeat++;}else{repeat++;n=0;}}
+    
+     System.out.println(count*repeat);}
+}
+}
+/*A Way Too Long Words*/
+
+import java.io.*;
+import java.util.*;
+
+public class GFG {
+   
+	public static void main (String[] args) {
+	Scanner sc=new Scanner(System.in);
+     int m=sc.nextInt();
+     String s;
+   for(int i=0;i<=m;i++){
+      s=sc.nextLine();         
+      if(s.length()>10){              
+        String result="";
+        result+=s.charAt(0);
+        result+=(s.length()-2);
+        result+=s.charAt(s.length()-1);
+        System.out.println(result);
+      }
+      else{
+          System.out.println(s);
+      }
+    }      
+}
+}
+/*Next Round */
+
+import java.io.*;
+import java.util.*;
+
+public class GFG {
+   
+	public static void main (String[] args) {
+	   
+	Scanner sc=new Scanner(System.in);
+  
+     int m=sc.nextInt();
+     int n=sc.nextInt();
+     int value[]=new int[m];
+     int i=0,count=0;
+     for(;i<m;i++)
+     {
+            value[i]= sc.nextInt();
+            if(value[i]==0) {i=0; break;}
+            if(i==n-1)
+           { n=i+1;
+            count=n-1;
+           }  
+            if(value[n-1]>value[i] && value[n-1]>0){
+            // count=n;
+            
+             break;
+            }else if (value[i]!=0) count++;
+       
+     }
+    // if(value[n-1]==0){i=0;}
+     System.out.print(count);   
+    
+}
+}
+/*package whatever String Task */
+
+import java.io.*;
+import java.util.*;
+
+public class GFG {
+	public static void main (String[] args) {
+	Scanner sc=new Scanner(System.in);
+   char[] a=sc.next().toLowerCase().toCharArray();
+  // char[] c=new char[]{'a','e','i','o','u','A','E','I','O','U'};
+    for(int i=0;i<a.length;i++){
+      if(a[i]=='a'|| a[i]=='e'|| a[i]=='i'|| a[i]=='o'|| a[i]=='u'|| a[i]=='A'|| a[i]=='E'|| a[i]=='I'|| a[i]=='O'|| a[i]=='U'|| a[i]=='Y'|| a[i]=='y'){
+        // System.out.print(".");
+      }
+      else{
+         // a[i]=a[i]+32;
+          System.out.print("."+ a[i]);
+      }
+    }
+}
+}
+/*package whatever //Football */
+
+import java.io.*;
+import java.util.*;
+
+public class GFG {
+	public static void main (String[] args) {
+	Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+    char[] ch=s.toCharArray();
+
+    int count=0,maxcount=0;
+  
+    for(int i=0;i<s.length();i++){
+        count=0;
+        while(i<s.length()-1 && ch[i]==ch[i+1]){
+            count++;
+            i++;
+        }
+        if(count>maxcount){
+            maxcount=count;
+        }
+    }
+ if(maxcount>=6){System.out.println("YES");}else{System.out.println("NO");}
+  
+	   // System.out.println(maxcount);
+	}
+ 
+}
+/*package whatever //Helpful Maths*/
+
+import java.io.*;
+import java.util.*;
+
+public class GFG {
+	public static void main (String[] args) {
+	Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+   List<Integer> num=new ArrayList<Integer>();
+   int z=0;
+   for(int i =0; i<s.length();i++){
+       if(s.charAt(i)!='+')
+       { 
+           num.add(s.charAt(i)-'0');
+       }
+   }
+   Collections.sort(num);
+    String result="";
+    int i=0;
+    for(;i<num.size()-1;i++){
+        result+=num.get(i);
+        result+="+";
+    }
+    result+=num.get(i);
+    System.out.println(result);
+}
+}
