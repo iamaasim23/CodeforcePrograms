@@ -1,0 +1,25 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+import java.lang.Math;
+
+public class GFG {
+	public static void main (String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int count=0;
+    int z =sc.nextInt();
+    sc.nextLine();
+    String s=sc.nextLine();
+    int i = 0;
+    char[] ch = new char[s.length()]; 
+    ch=s.toCharArray();
+    while(s.length()-1>i){
+           if(ch[i]==ch[i+1]) count++;
+          
+            i++;
+        } 
+    System.out.println(count);
+        
+}
+}
